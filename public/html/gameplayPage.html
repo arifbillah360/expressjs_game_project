@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/gameplay.css" />
+    <script defer src="../js/gameplay.js"></script>
+  </head>
+  <body>
+    <!--  -->
+    <header class="navigation-panel">
+      <div class="resource">
+        <img draggable="false" src="../img/gameImg/bricks128.png" alt="" />
+        <p>12345</p>
+      </div>
+      <div class="resource">
+        <img draggable="false" src="../img/gameImg/steel128.png" alt="" />
+        <p>12345</p>
+      </div>
+      <div class="resource">
+        <img draggable="false" src="./img/gameImg/oil128.png" alt="" />
+        <p>99999</p>
+      </div>
+    </header>
+    <!-- Buildings overview left side panel -->
+    <container class="buildings-overview">
+      <div id="player_buildings-tab" class="player_buildings">
+        <button type="button" class="building_tab" id="headquarters">
+          <h2 class="building_name">headquarters</h2>
+          <span class="building_lvl">99</span>
+        </button>
+        <button type="button" class="building_tab" id="airfield">
+          <h2 class="building_name">airfield</h2>
+          <span class="building_lvl">99</span>
+        </button>
+        <button type="button" class="building_tab" id="mine">
+          <h2 class="building_name">mine</h2>
+          <span class="building_lvl">99</span>
+        </button>
+        <button type="button" class="building_tab" id="powerplant">
+          <h2 class="building_name">powerplant</h2>
+          <span class="building_lvl">99</span>
+        </button>
+        <button type="button" class="building_tab" id="barracks">
+          <h2 class="building_name">barracks</h2>
+          <span class="building_lvl">99</span>
+        </button>
+        <button type="button" class="building_tab" id="tankFactory">
+          <h2 class="building_name">tank factory</h2>
+          <span class="building_lvl">99</span>
+        </button>
+      </div>
+      <div class="player_buildings-info">
+        <!-- default status info panel -->
+        <div class="buildings_info-panel info-panel_all display_info-panel">
+          <h2 class="building_info-name">No activity</h2>
+          <span>headquarters lvl 2</span>
+          <span>tankfactory working</span>
+        </div>
+        <!-- headquarters info panel -->
+        <div class="info_close-btn" id="info_close-btn"></div>
+        <div
+          id="headquarters_info"
+          class="headquarters_info buildings_info-panel"
+        >
+          <h2 class="building_info-name">headquarters lvl: <span>99</span></h2>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>upgrade</h3>
+          </button>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>repair</h3>
+          </button>
+          <div class="buildings_upgrades">
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>reinforced super strong concrete</p>
+              <button class="building_research-btn">COMPLETE</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>sattelite laser power</p>
+              <button class="building_research-btn">research</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>infinite energy 2</p>
+              <button class="building_research-btn">research</button>
+            </span>
+          </div>
+        </div>
+        <!-- airfield info panel -->
+        <div id="airfield_info" class="airfield_info buildings_info-panel">
+          <h2 class="building_info-name">airfield lvl: <span>99</span></h2>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>upgrade</h3>
+          </button>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>repair</h3>
+          </button>
+          <div class="buildings_upgrades">
+            <span class="building_upgrade researched">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>reinforced super strong concrete</p>
+              <button class="building_research-btn researched">COMPLETE</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk2</p>
+              <button class="building_research-btn">research</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk3</p>
+              <button class="building_research-btn">research</button>
+            </span>
+          </div>
+        </div>
+        <!-- mine info panel -->
+        <div id="mine_info" class="mine_info buildings_info-panel">
+          <h2 class="building_info-name">mine lvl: <span>99</span></h2>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>upgrade</h3>
+          </button>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>repair</h3>
+          </button>
+          <div class="buildings_upgrades">
+            <span class="building_upgrade researched">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>reinforced super strong concrete</p>
+              <button class="building_research-btn researched">COMPLETE</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk2</p>
+              <button class="building_research-btn">research</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk3</p>
+              <button class="building_research-btn">research</button>
+            </span>
+          </div>
+        </div>
+        <!-- powerplant info panel -->
+        <div id="powerplant_info" class="powerplant_info buildings_info-panel">
+          <h2 class="building_info-name">powerplant lvl: <span>99</span></h2>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>upgrade</h3>
+          </button>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>repair</h3>
+          </button>
+          <div class="buildings_upgrades">
+            <span class="building_upgrade researched">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>reinforced super strong concrete</p>
+              <button class="building_research-btn researched">COMPLETE</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk2</p>
+              <button class="building_research-btn">research</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk3</p>
+              <button class="building_research-btn">research</button>
+            </span>
+          </div>
+        </div>
+        <!-- barracks -->
+        <div id="barracks_info" class="barracks_info buildings_info-panel">
+          <h2 class="building_info-name">barracks lvl: <span>99</span></h2>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>upgrade</h3>
+          </button>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>repair</h3>
+          </button>
+          <div class="buildings_upgrades">
+            <span class="building_upgrade researched">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>reinforced super strong concrete</p>
+              <button class="building_research-btn researched">COMPLETE</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk2</p>
+              <button class="building_research-btn">research</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk3</p>
+              <button class="building_research-btn">research</button>
+            </span>
+          </div>
+        </div>
+        <!-- tank factory -->
+        <div id="tankFactory_info" class="tankFactory buildings_info-panel">
+          <h2 class="building_info-name">tank factory lvl: <span>99</span></h2>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>upgrade</h3>
+          </button>
+          <button class="buildings_operation-btn">
+            <div>
+              <span>stone: 999</span>
+              <span>iron: 999</span>
+              <span>coal: 999</span>
+            </div>
+            <h3>repair</h3>
+          </button>
+          <div class="buildings_upgrades">
+            <span class="building_upgrade researched">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>reinforced super strong concrete</p>
+              <button class="building_research-btn researched">COMPLETE</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk2</p>
+              <button class="building_research-btn">research</button>
+            </span>
+            <span class="building_upgrade">
+              <img
+                class="building_upgrade-img"
+                src="../img/gameImg/cementPillar128.png"
+                alt=""
+              />
+              <p>quirk3</p>
+              <button class="building_research-btn">research</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </container>
+    <container id="player_units-tab" class="player_units display_units">
+      <button class="player_units-btn" type="button">OPEN UNITS TAB</button>
+      <div class="units_infantry">
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/infantryType1.png" alt="" />
+          <p>Riflemen</p>
+          <p class="unit_quantity">2500</p>
+        </span>
+        <span class="unit">
+          <img
+            class="unit_img"
+            src="../img/gameImg/heavyTrooper128.png"
+            alt=""
+          />
+          <p>Grenadiers</p>
+          <p>3999</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/sniper128.png" alt="" />
+          <p>Sniper</p>
+          <p>25</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/heavy128.png" alt="" />
+          <p>Heavy Troop</p>
+          <p>432</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/infantryType1.png" alt="" />
+          <p>Anti-Tank Trooper</p>
+          <p>9999</p>
+        </span>
+      </div>
+      <div class="units_vehicles">
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/tankType1.png" alt="" />
+          <p>Marksman</p>
+          <p>2500</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/tankType1.png" alt="" />
+          <p>Sniper</p>
+          <p>3999</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/tankType1.png" alt="" />
+          <p>Bombardier</p>
+          <p>25</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/tankType1.png" alt="" />
+          <p>Explosives</p>
+          <p>432</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/tankType1.png" alt="" />
+          <p>Rifleman</p>
+          <p>9999</p>
+        </span>
+      </div>
+      <div class="units_aerial">
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/planeType1.png" alt="" />
+          <p>Marksman</p>
+          <p>2500</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/planeType1.png" alt="" />
+          <p>Sniper</p>
+          <p>3999</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/planeType1.png" alt="" />
+          <p>Bombardier</p>
+          <p>25</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/planeType1.png" alt="" />
+          <p>Explosives</p>
+          <p>432</p>
+        </span>
+        <span class="unit">
+          <img class="unit_img" src="../img/gameImg/planeType1.png" alt="" />
+          <p>Rifleman</p>
+          <p>9999</p>
+        </span>
+      </div>
+    </container>
+  </body>
+</html>

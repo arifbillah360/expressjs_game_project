@@ -1,0 +1,52 @@
+/* font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Russo One', sans-serif; */
+
+.login-form_left-ctn,
+.register-form_right-ctn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vw;
+  min-width: 100vw;
+  transition: transform 1s;
+  font-family: "Russo One", sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(204, 204, 203) 0%,
+    rgb(104, 104, 95) 100%
+  );
+  color: rgba(255, 227, 0, 255);
+  -webkit-text-stroke: 0.3px rgb(0, 0, 0);
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 227, 0, 0.05);
+}
+
+.input-cnt {
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 227, 0, 255);
+}
+
+.input-cnt label {
+  position: absolute;
+  top: -60%;
+  left: 1%;
+  padding: 0;
+}
+
+.input-cnt input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: none;
+  background: none;
+  padding: 0.5rem;
+}

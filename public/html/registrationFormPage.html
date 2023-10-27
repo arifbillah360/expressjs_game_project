@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+
+    <link rel="stylesheet" href="../css/globalCss.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <script defer src="../js/loginForm.js"></script>
+  </head>
+  <body>
+    <!-- LOGIN FORM -->
+    <div class="login-form_left-ctn">
+      <div class="form_left">
+        <h2>If you are new here and want to register click here:</h2>
+        <button>REGISTER</button>
+      </div>
+      <form method="POST" class="login_form form">
+        <h1>LOGIN</h1>
+        <div class="input-cnt">
+          <label for="email_login">Email:</label>
+          <input
+            type="email"
+            id="email_login"
+            name="email"
+            autocomplete="email"
+            placeholder="Enter your username"
+          />
+        </div>
+        <div class="input-cnt">
+          <label for="password_login">Password:</label>
+          <input
+            type="password"
+            id="password_login"
+            name="password_login"
+            required
+            autocomplete="current-password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <!-- REGISTER FORM -->
+    <div class="register-form_rigth-ctn">
+      <div class="form_right"></div>
+      <form method="POST" class="register_form form">
+        <h1>REGISTER</h1>
+        <div>
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            autocomplete="username"
+            placeholder="Enter your username"
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div>
+          <label for="passwordConfirm">Password Confirm:</label>
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="passwordConfirm"
+            autocomplete="current-password"
+            placeholder="Enter your password confirm"
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>

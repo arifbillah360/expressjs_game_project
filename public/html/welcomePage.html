@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/welcomePage.css" />
+    <script defer src="../js/welcomePage.js"></script>
+  </head>
+  <body>
+    <div class="user_msg">
+      user registered successfully! please login in from the login screen
+    </div>
+    <!-- left side of the page -->
+    <main>
+      <section class="section_user-status">
+        <h3 id="user-status_tologin" class="show_form">
+          Already registered user?
+        </h3>
+        <h3 id="user-status_toregister" class="">Not registered yet?</h3>
+        <button type="button" id="change-form_login" class="show_form">
+          Click here to LOGIN
+        </button>
+        <button type="button" id="change-form_register" class="">
+          Click here to REGISTER
+        </button>
+      </section>
+      <section class="section_general">
+        <h3>About the Game</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+          blanditiis assumenda numquam qui alias quidem deleniti fuga officia
+          necessitatibus unde harum in odit, pariatur totam aspernatur! Illum
+          qui natus enim!
+        </p>
+      </section>
+      <section class="section_forum">
+        <a href="#">Join the community HERE!</a>
+        <div class="section_news">
+          <a class="new-content">
+            <h2>New game version released</h2>
+            <p>10/9/2023</p>
+            <img src="../img/gameImg/suppliesIcon64.png" alt="" />
+          </a>
+          <!--  -->
+          <a class="new-content">
+            <h2>Server update</h2>
+            <p>10/9/2023</p>
+            <img src="../img/gameImg/suppliesIcon64.png" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- right side of the page -->
+    <aside>
+      <!-- register form -->
+      <form method="POST" id="register_form" class="register_form show_form">
+        <h2>Register</h2>
+        <!-- -->
+        <div class="register_input">
+          <label for="register_username">Choose your username</label>
+          <input
+            type="text"
+            id="register_username"
+            name="register_username"
+            placeholder="username"
+            autocomplete="username"
+          />
+        </div>
+        <!--  -->
+        <div class="register_input">
+          <label for="register_email">Email address</label>
+          <input
+            type="text"
+            id="register_email"
+            name="register_email"
+            placeholder="email"
+            autocomplete="email"
+          />
+        </div>
+        <!--  -->
+        <div class="register_input">
+          <label for="register_password">Choose your password</label>
+          <input
+            type="password"
+            id="register_password"
+            name="register_password"
+            placeholder="password"
+            autocomplete="new-password"
+          />
+        </div>
+        <!--  -->
+        <div class="register_input">
+          <label for="register_confirm-password">Confirm your password</label>
+          <input
+            type="password"
+            id="register_confirm-password"
+            name="register_confirm-password"
+            placeholder="password confirm"
+            autocomplete="new-password"
+          />
+        </div>
+        <button type="submit">REGISTER</button>
+      </form>
+      <!-- login form -->
+      <form method="POST" id="login_form" class="login_form">
+        <h2>LOGIN</h2>
+        <div class="login_input">
+          <label for="login_email">Email address</label>
+          <input
+            type="text"
+            id="login_email"
+            name="login_email"
+            placeholder="Your email address"
+            autocomplete="email"
+          />
+        </div>
+        <div class="login_input">
+          <label for="login_password">Password</label>
+          <input
+            type="password"
+            id="login_password"
+            name="login_password"
+            placeholder="Password"
+            autocomplete="current-password"
+          />
+        </div>
+        <button type="submit">LOGIN</button>
+      </form>
+    </aside>
+  </body>
+</html>

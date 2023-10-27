@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/globalCss.css" />
+    <script defer src="../js/loginForm.js"></script>
+  </head>
+  <body>
+    <div class="profile-photo-cnt">
+      <img class="profile-photo" src="" alt="" />
+      <form>
+        <input
+          type="file"
+          accept="image/*"
+          class="upload-style"
+          id="photo"
+          name="photo"
+          hidden
+        />
+        <label class="photo-label" for="photo">Choose new photo</label>
+        <button class="photo-submit" type="submit">Save changes</button>
+      </form>
+    </div>
+    <div>
+      <h1 class="welcome-content">Welcome to my page</h1>
+      <h2 class="role">Your role is:</h2>
+      <form class="user-data">
+        <p>You can change your current email address from the input bellow.</p>
+        <input type="text" value="current user email" name="email" id="email" />
+        <p>You can change your current username from the input bellow.</p>
+        <input
+          type="text"
+          value="current username"
+          name="username"
+          id="username"
+        />
+        <button class="submitBtn" type="submit">SAVE CHANGES</button>
+      </form>
+
+      <form class="user-password">
+        <p>You can reset your password from here:</p>
+        <input type="password" value="YOUR PASSWORD ***" id="passwordCurrent" />
+        <input
+          type="password"
+          value="YOUR PASSWORD CONFIRM ***"
+          id="password"
+        />
+        <p>Input here the new password</p>
+        <input type="password" value="NEW PASSWORD ***" id="passwordConfirm" />
+        <button class="reset-pass-btn">RESET MY PASSWORD</button>
+      </form>
+      <button type="button" class="logout">Logout</button>
+    </div>
+  </body>
+</html>

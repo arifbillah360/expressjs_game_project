@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Russo+One&display=swap");
+/* font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Russo One', sans-serif; */
+
+:root {
+  /* --section-rotate: 9vw; */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* button:focus,
+a:focus {
+  outline: none;
+}
+
+a:active {
+  color: #551a8b;
+}
+
+a:visited {
+  color: #551a8b;
+} */
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(200, 173, 161) 0%,
+    rgb(104, 104, 95) 100%
+  );
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.resource {
+  width: 36px;
+  padding: 0.2rem;
+  background: rgba(37, 34, 47, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(166, 185, 199, 1);
+  font-family: "Russo One", sans-serif;
+  color: 000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: default;
+  transition: border 0.2s, color 0.2s;
+}
+
+.resource:hover {
+  border: 1px solid rgb(200, 173, 161);
+  color: rgb(200, 173, 161);
+}
+
+.resource img {
+  width: 24px;
+  height: 24px;
+  user-select: none;
+}
+
+.player_units {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, 87px);
+  min-width: 90%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(166, 185, 199, 1);
+  color: #fff;
+  /* rgba(37, 34, 47, 0.2)
+  i have to check and confirm which color to use for the bacground
+  
+  */
+  background: rgba(37, 34, 47, 0.9);
+  transition: color 0.2s, background 0.2s, border 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.display_units {
+  transform: translate(-50%, 0) !important;
+}
+
+.player_units-btn {
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  position: absolute;
+  width: 100%;
+  border-radius: 1rem;
+  top: -3rem;
+  left: 50%;
+  height: 2.5rem;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  border: none;
+  background: rgba(37, 34, 47, 0.9);
+  border: 1px solid rgba(166, 185, 199, 1);
+  color: #fff;
+  transition: border 0.2s, color 0.2s;
+}
+
+.player_units-btn:hover {
+  border: 1px solid rgb(200, 173, 161);
+  color: rgb(200, 173, 161);
+}
+
+.units_infantry,
+.units_vehicles,
+.units_aerial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin: 0rem 1rem;
+}
+
+.unit,
+.building_upgrade {
+  /* font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Russo One', sans-serif; */
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 0.1rem;
+  width: 60px;
+  max-width: 60px;
+  max-height: 78px;
+  height: 78px;
+  border: 1px solid rgba(166, 185, 199, 1);
+  background: rgb(138, 123, 116);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 0.5rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.unit:hover,
+.building_upgrade:hover,
+.building_research-btn:hover {
+  outline: 1px solid salmon;
+  outline-offset: 1px;
+  background: rgb(200, 173, 161);
+}
+
+.unit_img,
+.building_upgrade-img {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+@media (max-width: 1146px) {
+  .player_units {
+    transform: translate(-50%, 167px);
+  }
+}
+
+@media (max-width: 768px) {
+  .player_units {
+    transform: translate(-50%, 247px);
+  }
+}
+/*  */
+.buildings-overview {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.player_buildings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.building_tab {
+  margin: 0;
+  border: 1px solid rgba(37, 34, 47, 1);
+  width: 32rem;
+  height: 2.5rem;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+}
+
+#headquarters {
+  background-image: url(../img/gameImg/basecamp.png),
+    linear-gradient(to bottom right, #e8bb78 0%, #e8bb78 100%);
+}
+
+#airfield {
+  background-image: url(../img/gameImg/airfieldTestImg.png),
+    linear-gradient(to bottom right, #e8bb78 0%, #e8bb78 100%);
+}
+
+#mine {
+  background-position: 0 64%;
+  background-image: url(../img/gameImg/mine.png),
+    linear-gradient(to bottom right, #e8bb78 0%, #e8bb78 100%);
+}
+
+#powerplant {
+  background-position: 0 30%;
+  background-image: url(../img/gameImg/mine.png),
+    linear-gradient(to bottom right, #e8bb78 0%, #e8bb78 100%);
+}
+
+#barracks {
+  background-image: url(../img/gameImg/factory.png),
+    linear-gradient(to bottom right, #e8bb78 0%, #e8bb78 100%);
+}
+
+#tankFactory {
+  background-image: url(../img/gameImg/factory.png),
+    linear-gradient(to bottom right, #e8bb78 0%, #e8bb78 100%);
+}
+
+.building_name {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(0, -50%);
+  font-family: "Russo One", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  -webkit-text-stroke: 0.8px rgba(37, 34, 47, 1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.building_lvl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4rem;
+  font-size: 1.5rem;
+  border: 1px solid rgba(37, 34, 47, 1);
+  background: rgba(37, 34, 47, 1);
+  color: #fff;
+}
+
+.building_tab:hover {
+  outline-offset: 1px;
+  outline: 1px solid salmon;
+}
+
+.player_buildings-info {
+  min-width: 50%;
+  padding: 1rem 0.5rem 4rem;
+  background: rgba(37, 34, 47, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(37, 34, 47, 1);
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+  color: #fff;
+  position: relative;
+}
+
+.info_close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(166, 185, 199, 1);
+  cursor: pointer;
+}
+
+.info_close-btn:hover {
+  outline: 2px solid salmon;
+  outline-offset: 2px;
+}
+
+.building_info-name {
+  text-transform: uppercase;
+}
+
+.buildings_operation-btn {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  width: 100%;
+  border: 1px solid rgba(166, 185, 199, 1);
+  background: rgb(138, 123, 116);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  transition: background 0.2s;
+  font-size: 1.2rem;
+}
+
+.buildings_operation-btn:hover {
+  outline: 1px solid salmon;
+  outline-offset: 1px;
+  background: rgb(200, 173, 161);
+}
+
+.buildings_operation-btn h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+.buildings_upgrades {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.building_upgrade {
+  height: 100px;
+  max-height: 100px;
+}
+
+.building_research-btn {
+  position: absolute;
+  bottom: -24px;
+  left: -1px;
+  width: calc(100% + 2px);
+  border: 1px solid rgba(166, 185, 199, 1);
+  background: rgb(138, 123, 116);
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.3rem 0rem;
+  min-height: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.researched {
+  background: rgb(121, 143, 121);
+}
+
+.researched:hover {
+  background: rgb(121, 143, 121);
+}
+
+.buildings_info-panel {
+  display: none;
+}
+
+.display_info-panel {
+  display: block;
+}

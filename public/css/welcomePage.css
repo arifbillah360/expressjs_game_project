@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Russo+One&display=swap");
+/* font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Russo One', sans-serif; */
+
+:root {
+  /* --section-rotate: 9vw; */
+  /* rgb(216, 199, 178) */
+  /* rgba(200, 173, 161, 255) */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+a:active {
+  color: #551a8b;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+body {
+  padding: 1.5rem 0rem;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(200, 173, 161, 255) 0%,
+    rgb(104, 104, 95) 100%
+  );
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  row-gap: 3rem;
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(37, 34, 47, 255);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 102, 176);
+}
+
+body::-webkit-scrollbar-track-piece {
+  background-color: rgba(37, 34, 47, 0.5);
+}
+
+/* For Firefox */
+body::-moz-scrollbar {
+  width: 1rem;
+}
+
+body::-moz-scrollbar-thumb {
+  background-color: rgba(37, 34, 47, 255);
+}
+
+body::-moz-scrollbar-thumb:hover {
+  background-color: rgb(0, 102, 176);
+}
+
+body::-moz-scrollbar-track-piece {
+  background-color: rgba(37, 34, 47, 0.5);
+}
+/* CUSTOM SCROLLBAR STYLE --END--*/
+.user_msg {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background: rgb(138, 123, 116, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(166, 185, 199, 1);
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  user-select: none;
+  outline: 2px solid salmon;
+  outline-offset: 2px;
+  animation: msgZoomIn 0.2s linear forwards;
+  min-width: 300px;
+  text-align: center;
+  display: none;
+}
+
+@keyframes msgZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+main {
+  width: 400px;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.section_user-status,
+.section_general,
+.section_forum {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.section_user-status h3,
+.section_general h3,
+.section_forum a {
+  font-family: "Russo One", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.section_user-status h3 {
+  display: none;
+}
+
+.section_user-status button {
+  display: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #551a8b;
+  min-height: 44px;
+}
+
+.section_general p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4rem;
+}
+
+.section_forum a {
+  align-self: center;
+}
+
+.section_news {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+}
+
+.new-content {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(166, 185, 199, 1);
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background: rgba(37, 34, 47, 0.9);
+  overflow: hidden;
+}
+
+.new-content:hover,
+.new-content:focus {
+  outline: 3px solid rgba(166, 185, 199, 1);
+}
+
+.new-content:active {
+  color: #fff;
+}
+
+.new-content h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  align-self: flex-start;
+  font-size: 1.4rem;
+}
+
+.new-content p {
+  position: relative;
+  z-index: 1;
+  margin-right: 3rem;
+  font-family: "Roboto Condensed", sans-serif;
+  align-self: flex-end;
+  font-size: 1rem;
+}
+
+.new-content img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 1%;
+  transform: translate(0, -50%);
+  width: 42px;
+  height: 42px;
+}
+
+aside {
+  width: 400px;
+  height: 368px;
+  min-height: 368px;
+  max-height: 368px;
+  max-width: 400px;
+  min-width: 400px;
+  background-image: url(../img/gameImg/nuclearExplosion512.png);
+  background-repeat: no-repeat;
+  background-position: -80% 85%;
+  background-size: auto;
+  border-radius: 1rem;
+}
+
+.register_form,
+.login_form {
+  display: none;
+  padding: 2rem;
+  background: rgba(37, 34, 47, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(166, 185, 199, 1);
+  font-family: "Russo One", sans-serif;
+  min-height: inherit;
+  max-height: inherit;
+  min-height: 368px;
+  max-height: 368px;
+  width: 100%;
+}
+
+.show_form {
+  display: block !important;
+}
+
+.register_input,
+.login_input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+input {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  position: relative;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(166, 185, 199, 1);
+  background: rgba(37, 34, 47, 0.3);
+}
+
+input:focus {
+  border: 1px solid rgba(166, 185, 199, 1);
+  outline: 2px solid rgba(166, 185, 199, 1);
+  outline-offset: 2px;
+}
+
+form h2 {
+  font-family: "Russo One", sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(166, 185, 199, 1);
+  color: #fff;
+  cursor: pointer;
+  background: rgba(37, 34, 47, 0.9);
+  transition: color 0.2s, background 0.2s, border 0.2s;
+}
+
+button:hover,
+button:focus {
+  border: 1px solid rgba(37, 34, 47, 0.9);
+  background: rgba(166, 185, 199, 1);
+  color: rgba(37, 34, 47, 0.9);
+}
